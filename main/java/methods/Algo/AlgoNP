@@ -1,5 +1,7 @@
 // Noahs class file for the main algo 
 
+package alog; // might not need
+
 //random import 
 // array import 
 import java.util.Random;
@@ -69,7 +71,10 @@ public class RotateArray
     }
 
 
-    
+    // public static void printArray()
+    // {
+    //     system.out.println();
+    // }
 
 }// end of class 
 
