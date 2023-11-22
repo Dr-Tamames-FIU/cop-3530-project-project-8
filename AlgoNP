@@ -9,73 +9,69 @@ import java.util.List;
 public class RotateArray
 {
 
-    //global params 
+    // global params 
  
     // constructor 
 
-    // setter 
+    // setter global params 
 
-    // getter 
+    // getter global params 
 
-
-    // method for algo
-    // public static void algo (Array[] most, Array[] mid, Array[] low, int amountToRotate)
-    // {
-
-    //     // add in the tasks via Main()
-
-    //     // rotate each array using amoutnToRotate
-
-    // }//end of method
-
-
-
-    public static void addToArray(String [] arrayLevel, String task )
+    public static void addToArray(String arrayLevel, String task )
     {
-        // arrayLevel is Most Important, Mid Important or least Important
-        // task is the 'job' /element to be added to arrayLevel
+        // arrayLevel is a string input, options: "Most", "Mid" or "Least"
+        // task is the 'task'/element to be added to the specified arrayLevel
+
         String[] most ={};   
         String[] mid ={};   
         String[] least ={};   
 
-        if arrayLevel.equals(most)  // string compare usign boolean
+        if arrayLevel.toLowerCase().equals(most)// string compare usign boolean whilst lowercase convert input
         {
             most.add(task);
         }
-        else if arrayLevel.equals(mid)
+        else if arrayLevel.toLowerCase().equals(mid)
         {
             mid.add(task);
         }
-        else if arrayLevel.equals(least)
+        else if arrayLevel.toLowerCase().equals(least)
         {
             least.add(task);
         }
         else // invalid arrayLevel
-       { 
-        System.out.println("Invalid array category");
+        { 
+        System.out.println("Invalid array category, enter \n most \n mid \n or least");
         }
+
+        // successful add
+        System.out.println( task + " Added to : " + arrayLevel + " important array ");
 
     } // end of addToArray
 
-    public static Array shuffleArray(String [] array) // shuffles the array
+    public static Array shuffleArray(String [] array, int amountTask) // shuffles the array
     {
         // randomly swaps the index value of an element by randomly genrating an indexwith another array element
 
         Random rand = new Random(); // creates object from Random class 
 
-        for (int i = 0; i < array.length; i++)
+        for (int i = 0; i < array.length; i++) // swaps every index val for each element in the array
          {
+            //gets the radnom index val within the bounds our of input array
 			int randomIndexToSwap = rand.nextInt(array.length);
+
+            //swapping
 			int temp = array[randomIndexToSwap];
 			array[randomIndexToSwap] = array[i];
 			array[i] = temp;
 		}
 
-        return array[:3]; // returns first 3 vals 
+        return array[:amountTask]; // returns first 3 vals  // CHECK if slice works
     }
+
+
     
 
 }// end of class 
 
 
-// check it is working
+// Testing 
