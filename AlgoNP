@@ -2,7 +2,11 @@
 
 //random import 
 // array import 
-public class RotateArray()
+import java.util.Random;
+import java.util.Arrays;
+import java.util.List;
+
+public class RotateArray
 {
 
     //global params 
@@ -15,14 +19,60 @@ public class RotateArray()
 
 
     // method for algo
-    public static void (Array[] most, Array[] mid, Array[] low, int amountToRotate)
+    // public static void algo (Array[] most, Array[] mid, Array[] low, int amountToRotate)
+    // {
+
+    //     // add in the tasks via Main()
+
+    //     // rotate each array using amoutnToRotate
+
+    // }//end of method
+
+
+
+    public static void addToArray(String [] arrayLevel, String task )
     {
+        // arrayLevel is Most Important, Mid Important or least Important
+        // task is the 'job' /element to be added to arrayLevel
+        String[] most ={};   
+        String[] mid ={};   
+        String[] least ={};   
 
-        // add in the tasks via Main()
+        if arrayLevel.equals(most)  // string compare usign boolean
+        {
+            most.add(task);
+        }
+        else if arrayLevel.equals(mid)
+        {
+            mid.add(task);
+        }
+        else if arrayLevel.equals(least)
+        {
+            least.add(task);
+        }
+        else // invalid arrayLevel
+       { 
+        System.out.println("Invalid array category");
+        }
 
-        // rotate each array using amoutnToRotate
+    } // end of addToArray
 
-    }//end of method
+    public static Array shuffleArray(String [] array) // shuffles the array
+    {
+        // randomly swaps the index value of an element by randomly genrating an indexwith another array element
+
+        Random rand = new Random(); // creates object from Random class 
+
+        for (int i = 0; i < array.length; i++)
+         {
+			int randomIndexToSwap = rand.nextInt(array.length);
+			int temp = array[randomIndexToSwap];
+			array[randomIndexToSwap] = array[i];
+			array[i] = temp;
+		}
+
+        return array[:3]; // returns first 3 vals 
+    }
     
 
 }// end of class 
