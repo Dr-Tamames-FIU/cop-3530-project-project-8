@@ -1,1 +1,28 @@
 // Noahs class file for the main algo 
+
+//random import 
+// array import 
+public class RotateArray()
+{
+
+    //global params 
+ 
+    // constructor 
+
+    // setter 
+
+    // getter 
+
+
+    // method for algo
+    public static void (Array[] most, Array[] mid, Array[] low, int amountToRotate)
+    {
+
+        // add in the tasks via Main()
+
+        // rotate each array using amoutnToRotate
+
+    }//end of method
+    
+
+}// end of class 
