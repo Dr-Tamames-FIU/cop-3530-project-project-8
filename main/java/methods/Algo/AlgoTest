@@ -9,14 +9,14 @@ import main/java/methods/Algo/AlgoNP; // releavtive path to algoritm
 
 public class main
 {
-    public static void testing(String[] args) //main
+    public static void main(String[] args) //main
     {
-        system.out.println("TEST");
+        system.out.println("\nTEST\n");
 
         RotateArray RotateArrayobj = new RotateArray;
 
         RotateArrayobj.addToArray("most", "clean");
         
-        
     }
+
 } //end of main class 
