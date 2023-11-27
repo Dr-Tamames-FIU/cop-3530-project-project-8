@@ -2,6 +2,7 @@
 
 package alog; // might not need
 
+//test
 //random import 
 // array import 
 import java.util.Random;

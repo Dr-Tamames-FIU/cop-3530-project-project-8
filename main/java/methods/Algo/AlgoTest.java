@@ -4,7 +4,7 @@
 
 //import main/java/methods/Algo/AlgoNP; // releavtive path to algoritm
 
-
+//test
 public class AlgoTest
 {
     public static void main(String[] args) //main
