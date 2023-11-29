@@ -1,5 +1,4 @@
 import java.io.IOException;
-
 import javafx.application.Application;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -15,21 +14,27 @@ public class TaskOrgGUI extends Application {
     private TextField text1, text2, text3;
 
     public static void main(String[] args) {
-        launch(args);
+        //launch(args);
+        System.out.println("lmao");
     }
 
     @Override
-    public void start(Stage primaryStage) {
+    public void start(Stage arg0) throws Exception {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'start'");
+    }
 
-        Parent root; 
-        root = FMXLLoader.load(getClass().getResource("MainScene.fxml"));
-            Scene scene = new Scene(root);
+  //  @Override
+  //  public void start(Stage primaryStage) {
 
-            primaryStage.setTitle("Task Organizer");
-            primaryStage.setScene(scene);
-            primaryStage.show();
-        }
+    //    Parent root; 
+      //  root = FMXLLoader.load(getClass().getResource("MainScene.fxml"));
+        //    Scene scene = new Scene(root);
+//
+  //          primaryStage.setTitle("Task Organizer");
+    //        primaryStage.setScene(scene);
+      //      primaryStage.show();
+       // }
 
 
     }
-
