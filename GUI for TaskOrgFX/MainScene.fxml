@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="363.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainSceneController">
+   <children>
+      <Label layoutX="152.0" layoutY="14.0" prefHeight="18.0" prefWidth="254.0" text="Task Organizer" textFill="#610079">
+         <font>
+            <Font name="Impact" size="37.0" />
+         </font>
+      </Label>
+      <TextField fx:id="text1" layoutX="28.0" layoutY="79.0" prefHeight="39.0" prefWidth="478.0" />
+      <TextField fx:id="text2" layoutX="28.0" layoutY="124.0" prefHeight="39.0" prefWidth="478.0" />
+      <TextField fx:id="text3" layoutX="28.0" layoutY="169.0" prefHeight="39.0" prefWidth="478.0" />
+      <Button layoutX="170.0" layoutY="226.0" mnemonicParsing="false" onAction="#submitButton" prefHeight="20.0" prefWidth="194.0" text="Send" />
+      <Label layoutX="62.0" layoutY="268.0" prefHeight="77.0" prefWidth="384.0" text="label" />
+   </children>
+</AnchorPane>

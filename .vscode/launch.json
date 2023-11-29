@@ -1,0 +1,38 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "AlgoTest",
+            "request": "launch",
+            "mainClass": "AlgoTest",
+            "projectName": "cop-3530-project-project-8_2057a806"
+        },
+        {
+            "type": "java",
+            "name": "TaskOrgCode",
+            "request": "launch",
+            "mainClass": "TaskOrgCode",
+            "projectName": "cop-3530-project-project-8_2057a806",
+            "vmArgs": "--module-path \"c:/Program Files/Java/javafx-sdk-21.0.1/lib\" --add-modules javafx.controls,javafx.fxml TaskOrgGUI"
+            
+        },
+        {
+            "type": "java",
+            "name": "TaskOrgGUI",
+            "request": "launch",
+            "mainClass": "TaskOrgGUI",
+            "projectName": "cop-3530-project-project-8_2057a806"
+        }
+    ]
+}
