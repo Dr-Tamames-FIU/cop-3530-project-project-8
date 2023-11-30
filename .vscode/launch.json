@@ -4,8 +4,13 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-
-
+        {
+            "type": "java",
+            "name": "hello",
+            "request": "launch",
+            "mainClass": "hello",
+            "projectName": "cop-3530-project-project-8_2057a806"
+        },
         {
             "type": "java",
             "name": "Current File",
@@ -25,6 +30,7 @@
             "request": "launch",
             "mainClass": "TaskOrgCode",
             "projectName": "cop-3530-project-project-8_2057a806",
+            "vmArgs": "--module-path \"C:/Java/javafx-sdk-21.0.1/lib\" --add-modules javafx.controls,javafx.fxml"
         },
         {
             "type": "java",
@@ -32,8 +38,17 @@
             "request": "launch",
             "mainClass": "TaskOrgGUI",
             "projectName": "cop-3530-project-project-8_2057a806",
-            "vmArgs": "--module-path \"c:/Program Files/Java/javafx-sdk-21.0.1/lib\" --add-modules javafx.controls,javafx.fxml TaskOrgGUI"
-
+            "vmArgs": "--module-path \"C:/Java/javafx-sdk-21.0.1/lib\" --add-modules javafx.controls,javafx.fxml"
         }
+,
+        {
+            "type": "java",
+            "name": "hello",
+            "request": "launch",
+            "mainClass": "hello",
+            "projectName": "cop-3530-project-project-8_2057a806",
+            "vmArgs": "--module-path \"C:/Java/javafx-sdk-21.0.1/lib\" --add-modules javafx.controls,javafx.fxml"
+        }
+
     ]
 }

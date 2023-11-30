@@ -19,10 +19,7 @@ public class MainSceneController {
     @FXML
     void submitButton(ActionEvent event) {
 
-        String input1 = text1.getText();
-        String input2 = text2.getText();
-        String input3 = text3.getText();
-        label.setText("User input: " + input1 + ", " + input2 + ", " + input3);
+        label.setText("User input: " + text1 + ", " + text2 + ", " + text3);
 
     }
 
