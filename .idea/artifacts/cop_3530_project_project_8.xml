@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="cop-3530-project-project-8">
+    <output-path>$PROJECT_DIR$/out/artifacts/cop_3530_project_project_8</output-path>
+    <root id="root">
+      <element id="archive" name="cop_3530_project_project_8.jar">
+        <element id="module-output" name="cop-3530-project-project-8" />
+      </element>
+    </root>
+  </artifact>
+</component>

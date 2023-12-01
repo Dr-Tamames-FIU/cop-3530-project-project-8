@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text layoutX="128.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TASK ORGANIZER" wrappingWidth="375.36328125">
+         <font>
+            <Font name="HelveticaNeueLTStd-Bd" size="40.0" />
+         </font>
+      </Text>
+      <Text layoutX="22.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Group 1" wrappingWidth="193.3367156982422">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <Text layoutX="261.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Group 2">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <Text layoutX="483.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Group 3">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <TextField fx:id="item1from1" layoutX="14.0" layoutY="153.0" />
+      <TextField fx:id="item2from1" layoutX="14.0" layoutY="200.0" />
+      <TextField fx:id="item3from1" layoutX="13.0" layoutY="244.0" />
+      <TextField fx:id="item1from2" layoutX="233.0" layoutY="155.0" />
+      <TextField fx:id="item2from2" layoutX="233.0" layoutY="202.0" />
+      <TextField fx:id="item3from2" layoutX="232.0" layoutY="246.0" />
+      <TextField fx:id="item1from3" layoutX="447.0" layoutY="151.0" />
+      <TextField fx:id="item2from3" layoutX="447.0" layoutY="198.0" />
+      <TextField fx:id="item3from3" layoutX="446.0" layoutY="242.0" />
+      <Button fx:id="organizeButton" layoutX="252.0" layoutY="299.0" mnemonicParsing="false" text="Organize Tasks" />
+      <TextArea fx:id="result1" layoutX="15.0" layoutY="344.0" prefHeight="100.0" prefWidth="150.0" />
+      <TextArea fx:id="result2" layoutX="225.0" layoutY="344.0" prefHeight="100.0" prefWidth="150.0" />
+      <TextArea fx:id="result3" layoutX="447.0" layoutY="344.0" prefHeight="100.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>

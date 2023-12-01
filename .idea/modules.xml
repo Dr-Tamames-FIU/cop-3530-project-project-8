@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/cop-3530-project-project-8.iml" filepath="$PROJECT_DIR$/cop-3530-project-project-8.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../../../Program Files/Java/javafx-sdk-21.0.1/lib/demo/demo.iml" filepath="$PROJECT_DIR$/../../../../../Program Files/Java/javafx-sdk-21.0.1/lib/demo/demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/main/main.iml" filepath="$PROJECT_DIR$/main/main.iml" />
+    </modules>
+  </component>
+</project>
