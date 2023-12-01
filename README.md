@@ -2,7 +2,14 @@
 cop-3530-project-project-8 created by GitHub Classroom
 Angie, Cesar, and Noah 
 
-# Decision Dilemma Problem Solver#
+Cesar: Frontend GIU 
+
+Noah: Backend logic 
+
+Angie: Integration of frontend and backend
+
+
+# Decision Dilemma Problem Solver #
 
 **What is the project?** 
 
