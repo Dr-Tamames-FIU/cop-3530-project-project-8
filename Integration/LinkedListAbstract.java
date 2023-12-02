@@ -7,7 +7,7 @@ import java.lang.reflect.Array;
 
 public class LinkedListBackend implements Connection {
 
-    protected List<String most = new LinkedList<>();
+    protected List<String> most = new LinkedList<>();
     protected List<String> mid = new LinkedList<>();
     protected List<String> least = new LinkedList<>();
 
