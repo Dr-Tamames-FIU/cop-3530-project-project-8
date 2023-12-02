@@ -40,7 +40,7 @@ public class MainSceneController {
     @FXML
     private Button organizeButton;
 
-    // angelica:
+    // angelica RotateArray instance
     private final Connection connection = new RotateArray();
 
     private final MostGroup mostGroup = new MostGroup();
