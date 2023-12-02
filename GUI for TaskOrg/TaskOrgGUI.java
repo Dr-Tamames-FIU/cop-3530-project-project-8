@@ -18,6 +18,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class TaskOrgGUI extends Application {
+    private final Connection connection = new RotateArray();
 
     @FXML
     private TextField item1from1;
@@ -62,7 +63,6 @@ public class TaskOrgGUI extends Application {
 
         primaryStage.setScene(new Scene(root, 600, 400));
 
-            primaryStage.show();
-        }}
-
-
+        primaryStage.show();
+    }
+}
