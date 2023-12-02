@@ -3,44 +3,117 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
-      <Text layoutX="128.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TASK ORGANIZER" wrappingWidth="375.36328125">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+      <ImageView fitHeight="715.0" fitWidth="1095.0" layoutX="-40.0" layoutY="-8.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../../../../java/com/example/projectcharles/minimalist-dark-gradient-wave-background-simple-design-for-your-website-vector.jpg" />
+         </image>
+      </ImageView>
+      <Text layoutX="240.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TASK ORGANIZER">
          <font>
             <Font name="HelveticaNeueLTStd-Bd" size="40.0" />
          </font>
+         <fill>
+            <RadialGradient centerX="0.4867256341782292" centerY="0.5" focusAngle="-96.84" proportional="false" radius="0.37155966802474555">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.22151656448841095" green="0.2177777737379074" blue="0.4421052634716034" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </fill>
       </Text>
-      <Text layoutX="22.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Group 1" wrappingWidth="193.3367156982422">
+      <Text fill="#9bd18c" layoutX="93.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Most:">
+         <font>
+            <Font name="HelveticaNeueLTStd-Bd" size="35.0" />
+         </font>
+      </Text>
+      <Text fill="#cfc88a" layoutX="350.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Middle:">
+         <font>
+            <Font name="HelveticaNeueLTStd-Bd" size="35.0" />
+         </font>
+      </Text>
+      <Text fill="#cf8a8a" layoutX="636.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Least:">
+         <font>
+            <Font name="HelveticaNeueLTStd-Bd" size="35.0" />
+         </font>
+      </Text>
+      <TextField fx:id="mostTask1" layoutX="57.0" layoutY="313.0" opacity="0.35" prefHeight="50.0" prefWidth="167.0">
          <font>
             <Font size="25.0" />
          </font>
-      </Text>
-      <Text layoutX="261.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Group 2">
+      </TextField>
+      <TextField fx:id="mostTask2" layoutX="53.0" layoutY="160.0" opacity="0.35" prefHeight="50.0" prefWidth="167.0">
          <font>
             <Font size="25.0" />
          </font>
-      </Text>
-      <Text layoutX="483.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Group 3">
+      </TextField>
+      <TextField fx:id="mostTask3" layoutX="54.0" layoutY="233.0" opacity="0.35" prefHeight="50.0" prefWidth="167.0">
          <font>
             <Font size="25.0" />
          </font>
-      </Text>
-      <TextField fx:id="item1from1" layoutX="14.0" layoutY="153.0" />
-      <TextField fx:id="item2from1" layoutX="14.0" layoutY="200.0" />
-      <TextField fx:id="item3from1" layoutX="13.0" layoutY="244.0" />
-      <TextField fx:id="item1from2" layoutX="233.0" layoutY="155.0" />
-      <TextField fx:id="item2from2" layoutX="233.0" layoutY="202.0" />
-      <TextField fx:id="item3from2" layoutX="232.0" layoutY="246.0" />
-      <TextField fx:id="item1from3" layoutX="447.0" layoutY="151.0" />
-      <TextField fx:id="item2from3" layoutX="447.0" layoutY="198.0" />
-      <TextField fx:id="item3from3" layoutX="446.0" layoutY="242.0" />
-      <Button fx:id="organizeButton" layoutX="252.0" layoutY="299.0" mnemonicParsing="false" text="Organize Tasks" />
-      <TextArea fx:id="result1" layoutX="15.0" layoutY="344.0" prefHeight="100.0" prefWidth="150.0" />
-      <TextArea fx:id="result2" layoutX="225.0" layoutY="344.0" prefHeight="100.0" prefWidth="150.0" />
-      <TextArea fx:id="result3" layoutX="447.0" layoutY="344.0" prefHeight="100.0" prefWidth="150.0" />
-   </children>
+      </TextField>
+      <TextField fx:id="middleTask1" layoutX="334.0" layoutY="160.0" opacity="0.35" prefHeight="50.0" prefWidth="167.0">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="middleTask2" layoutX="335.0" layoutY="238.0" opacity="0.35" prefHeight="50.0" prefWidth="167.0">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="middleTask3" layoutX="337.0" layoutY="314.0" opacity="0.35" prefHeight="50.0" prefWidth="167.0">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="leastTask1" layoutX="598.0" layoutY="159.0" opacity="0.35" prefHeight="50.0" prefWidth="167.0">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="leastTask2" layoutX="598.0" layoutY="234.0" opacity="0.35" prefHeight="50.0" prefWidth="167.0">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="leastTask3" layoutX="598.0" layoutY="312.0" opacity="0.35" prefHeight="50.0" prefWidth="167.0">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </TextField>
+      <TextArea fx:id="mostTextArea" layoutX="47.0" layoutY="413.0" opacity="0.35" prefHeight="70.0" prefWidth="186.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="middleTextArea" layoutX="323.0" layoutY="411.0" opacity="0.35" prefHeight="70.0" prefWidth="186.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="leastTextArea" layoutX="591.0" layoutY="412.0" opacity="0.35" prefHeight="70.0" prefWidth="186.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextArea>
+      <Button fx:id="organizeButton" layoutX="302.0" layoutY="507.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="234.0" text="Organize" />
+    </children>
 </AnchorPane>
