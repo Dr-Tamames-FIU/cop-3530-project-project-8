@@ -14,6 +14,6 @@ public interface Connection {
     // this method is used to shuffles the array
     List<String> shuffleArray(String arrayLevel, int taskAmount);
 
-    // this method is uses to empty the array
+    // this method is used to empty the array
     void emptyArray(String arrayLevel);
 }
