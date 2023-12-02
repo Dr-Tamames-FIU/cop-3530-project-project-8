@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class RotateArray extends LinkedListAbstract {
+public class RotateArray {
     public List<String> most = new ArrayList<>();
     public List<String> mid = new ArrayList<>();
     public List<String> least = new ArrayList<>();
