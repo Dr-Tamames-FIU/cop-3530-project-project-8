@@ -12,10 +12,13 @@ import java.util.Arrays;
 import java.util.List;
 
 public class RotateArray {
+
+    // declartion of the array 
     public List<String> most = new ArrayList<>();
     public List<String> mid = new ArrayList<>();
     public List<String> least = new ArrayList<>();
 
+    // Creates the array
     public void setMostArray() {
         this.most = most;
     }
@@ -41,7 +44,8 @@ public class RotateArray {
         return least;
     }
 
-    public List<String> emptyArray(String arrayLevel) {
+    public List<String> emptyArray(String arrayLevel) 
+    {
         List<String> arrayToEmpty = null; // list to replace the current one
 
         // gets the coroect list
