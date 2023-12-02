@@ -40,6 +40,9 @@ public class MainSceneController {
     @FXML
     private Button organizeButton;
 
+    // angelica:
+    private final Connection connection = new RotateArray();
+
     private final MostGroup mostGroup = new MostGroup();
     private final MiddleGroup middleGroup = new MiddleGroup();
     private final LeastGroup leastGroup = new LeastGroup();
@@ -61,7 +64,8 @@ public class MainSceneController {
         organizeGroup(leastGroup, leastTask1, leastTask2, leastTask3, leastTextArea);
     }
 
-    private void organizeGroup(Connection group, TextField task1, TextField task2, TextField task3, TextArea resultArea) {
+    private void organizeGroup(Connection group, TextField task1, TextField task2, TextField task3,
+            TextArea resultArea) {
         List<String> tasks = Arrays.asList(task1.getText(), task2.getText(), task3.getText());
         group.sendArrayData(tasks);
 
