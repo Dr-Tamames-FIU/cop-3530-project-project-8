@@ -55,11 +55,11 @@ public class LinkedListAbstract implements Connection {
         }
     }
 
-    private List<String> getList(String arrayLevel)
-        switch (arrayLevel.toLowerCase){
-            case "most";
+    private List<String> getList(String arrayLevel){
+        switch (arrayLevel.toLowerCase()){
+            case "most":
                 return most;
-            case : "mid";
+            case "mid":
                 return mid;
             case "least":
                 return least;
@@ -67,4 +67,6 @@ public class LinkedListAbstract implements Connection {
                 System.out.println("Array category not valid: " + arrayLevel);
                 return null;
     }
+}
+
 }
