@@ -6,9 +6,7 @@
 //random import 
 // array import 
 import java.util.Random;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class RotateArray {
@@ -119,7 +117,7 @@ public class RotateArray {
     // Added this getList for the RotateArray implementation into the GUI
     // depending on the value of the arrayLevel the list 
     // will be returning something back
-    
+
     public List<String> getList(String arrayLevel) {
         switch (arrayLevel.toLowerCase()) {
             case "most":

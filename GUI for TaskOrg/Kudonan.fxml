@@ -18,7 +18,7 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="637.0" prefWidth="831.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
     <children>
 
-    <!-- Created a purple backgorund with the form
+    <!-- Created a purple background with the form
     of a rectangle -->
 
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#291746" height="682.0" layoutX="-36.0" layoutY="-19.0" stroke="BLACK" strokeType="INSIDE" width="894.0" />
