@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "TaskOrgApp",
+            "request": "launch",
+            "mainClass": "TaskOrgApp",
+            "projectName": "cop-3530-project-project-8_2057a806"
+        },
+        {
+            "type": "java",
             "name": "ConnectionMain",
             "request": "launch",
             "mainClass": "ConnectionMain",

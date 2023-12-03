@@ -50,47 +50,47 @@
             <Font name="HelveticaNeueLTStd-Bd" size="35.0" />
          </font>
       </Text>
-      <TextField fx:id="mostTask1" layoutX="67.0" layoutY="323.0" opacity="0.35" prefHeight="50.0" prefWidth="167.0">
+      <TextField fx:id="item1from1" layoutX="67.0" layoutY="323.0" opacity="0.35" prefHeight="50.0" prefWidth="167.0">
          <font>
             <Font size="25.0" />
          </font>
       </TextField>
-      <TextField fx:id="mostTask2" layoutX="63.0" layoutY="170.0" opacity="0.35" prefHeight="50.0" prefWidth="167.0">
+      <TextField fx:id="item2from1" layoutX="63.0" layoutY="170.0" opacity="0.35" prefHeight="50.0" prefWidth="167.0">
          <font>
             <Font size="25.0" />
          </font>
       </TextField>
-      <TextField fx:id="mostTask3" layoutX="64.0" layoutY="243.0" opacity="0.35" prefHeight="50.0" prefWidth="167.0">
+      <TextField fx:id="item3from1" layoutX="64.0" layoutY="243.0" opacity="0.35" prefHeight="50.0" prefWidth="167.0">
          <font>
             <Font size="25.0" />
          </font>
       </TextField>
-      <TextField fx:id="middleTask1" layoutX="344.0" layoutY="170.0" opacity="0.35" prefHeight="50.0" prefWidth="167.0">
+      <TextField fx:id="item1from2" layoutX="344.0" layoutY="170.0" opacity="0.35" prefHeight="50.0" prefWidth="167.0">
          <font>
             <Font size="25.0" />
          </font>
       </TextField>
-      <TextField fx:id="middleTask2" layoutX="345.0" layoutY="248.0" opacity="0.35" prefHeight="50.0" prefWidth="167.0">
+      <TextField fx:id="item2from2" layoutX="345.0" layoutY="248.0" opacity="0.35" prefHeight="50.0" prefWidth="167.0">
          <font>
             <Font size="25.0" />
          </font>
       </TextField>
-      <TextField fx:id="middleTask3" layoutX="347.0" layoutY="324.0" opacity="0.35" prefHeight="50.0" prefWidth="167.0">
+      <TextField fx:id="item3from2" layoutX="347.0" layoutY="324.0" opacity="0.35" prefHeight="50.0" prefWidth="167.0">
          <font>
             <Font size="25.0" />
          </font>
       </TextField>
-      <TextField fx:id="leastTask1" layoutX="608.0" layoutY="169.0" opacity="0.35" prefHeight="50.0" prefWidth="167.0">
+      <TextField fx:id="item1from3" layoutX="608.0" layoutY="169.0" opacity="0.35" prefHeight="50.0" prefWidth="167.0">
          <font>
             <Font size="25.0" />
          </font>
       </TextField>
-      <TextField fx:id="leastTask2" layoutX="608.0" layoutY="244.0" opacity="0.35" prefHeight="50.0" prefWidth="167.0">
+      <TextField fx:id="item2from3" layoutX="608.0" layoutY="244.0" opacity="0.35" prefHeight="50.0" prefWidth="167.0">
          <font>
             <Font size="25.0" />
          </font>
       </TextField>
-      <TextField fx:id="leastTask3" layoutX="608.0" layoutY="322.0" opacity="0.35" prefHeight="50.0" prefWidth="167.0">
+      <TextField fx:id="item3from3" layoutX="608.0" layoutY="322.0" opacity="0.35" prefHeight="50.0" prefWidth="167.0">
          <font>
             <Font size="25.0" />
          </font>
@@ -110,6 +110,6 @@
             <Font size="15.0" />
          </font>
       </TextArea>
-      <Button fx:id="organizeButton" layoutX="312.0" layoutY="517.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="234.0" text="Organize" />
+      <Button fx:id="organizeButton" layoutX="312.0" layoutY="517.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="234.0" text="Organize" onAction="#organizeButton" />
     </children>
 </AnchorPane>
