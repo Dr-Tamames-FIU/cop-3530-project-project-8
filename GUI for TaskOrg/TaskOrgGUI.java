@@ -6,22 +6,16 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import java.io.IOException;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.AnchorPane;
-import javafx.stage.Stage;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 public class TaskOrgGUI extends Application {
 
-    private final LinkedListAbstract linkedListAbstract = new LinkedListAbstract();
+    private final RotateArray rotateArray = new RotateArray();
 
 
 
@@ -73,22 +67,23 @@ public class TaskOrgGUI extends Application {
 
     @FXML
     private void organizeButton(ActionEvent event) {
-        System.out.println("Button pressed! Calling organizeTasks...");
-        organizeTasks();
-        System.out.println("organizeTasks called successfully!");
 
-        linkedListAbstract.emptyArray("most");
-        linkedListAbstract.emptyArray("mid");
-        linkedListAbstract.emptyArray("least");
+        rotateArray.emptyArray("most");
+
+        rotateArray.emptyArray("mid");
+
+        rotateArray.emptyArray("least");
 
         collectAndAddTasks("most", item1from1, item2from1, item3from1);
+
         collectAndAddTasks("mid", item1from2, item2from2, item3from2);
+
         collectAndAddTasks("least", item1from3, item2from3, item3from3);
     }
 
     private void collectAndAddTasks(String category, TextField... textFields) {
         for (TextField textField : textFields) {
-            linkedListAbstract.addToArray(category, textField.getText());
+            rotateArray.addToArray(category, textField.getText());
         }
     }
 
@@ -104,15 +99,15 @@ public class TaskOrgGUI extends Application {
 
     private void collectTasksFromTextFields(){
 
-        linkedListAbstract.emptyArray("most");
-        linkedListAbstract.emptyArray("mid");
-        linkedListAbstract.emptyArray("least");
+        rotateArray.emptyArray("most");
+        rotateArray.emptyArray("mid");
+        rotateArray.emptyArray("least");
 
         for (int i = 1; i <= 3; i++) {
 
-            linkedListAbstract.addToArray("most", getTaskFromTextField("item" + i + "from1"));
-            linkedListAbstract.addToArray("mid", getTaskFromTextField("item" + i + "from2"));
-            linkedListAbstract.addToArray("least", getTaskFromTextField("item" + i + "from3"));
+            rotateArray.addToArray("most", getTaskFromTextField("item" + i + "from1"));
+            rotateArray.addToArray("mid", getTaskFromTextField("item" + i + "from2"));
+            rotateArray.addToArray("least", getTaskFromTextField("item" + i + "from3"));
         }
         
 
@@ -126,9 +121,57 @@ public class TaskOrgGUI extends Application {
 
     private void organizeAndDisplay (String arrayLevel, TextArea resultArea) {
 
-        List<String> organizedTasks = linkedListAbstract.shuffleArray(arrayLevel, 3);
+        List<String> organizedTasks = rotateArray.shuffleArray(rotateArray.getList(arrayLevel.toLowerCase()), 3);
         resultArea.setText(String.join("\n", organizedTasks));
 
     }
+
+        private static class RotateArray {
+
+            private List<String> most = new ArrayList<>();
+            private List<String> mid = new ArrayList<>();
+            private List<String> least = new ArrayList<>();
+    
+            public List<String> getList(String arrayLevel) {
+                switch (arrayLevel.toLowerCase()) {
+                    case "most":
+                        return most;
+                    case "mid":
+                        return mid;
+                    case "least":
+                        return least;
+                    default:
+                        System.out.println("Array category not valid: " + arrayLevel);
+                        return new ArrayList<>();
+                }
+            }
+    
+            public void addToArray(String arrayLevel, String task) {
+                List<String> array = getList(arrayLevel);
+                if (array != null) {
+                    array.add(task);
+                } else {
+                    System.out.println("Array category not valid: " + arrayLevel);
+                }
+            }
+    
+            public List<String> shuffleArray(List<String> inputList, int amountTask) {
+                List<String> shuffledList = new ArrayList<>(inputList);
+        Collections.shuffle(shuffledList);
+
+        int endIndex = Math.min(amountTask, shuffledList.size());
+        return shuffledList.subList(0, endIndex);
+            }
+    
+            public void emptyArray(String arrayLevel) {
+                List<String> toEmptyArray = getList(arrayLevel);
+                if (toEmptyArray != null) {
+                    toEmptyArray.clear();
+                    System.out.println(arrayLevel + " list is now empty");
+                } else {
+                    System.out.println("Array category is invalid: " + arrayLevel);
+                }
+            }
+        }
 
 }
