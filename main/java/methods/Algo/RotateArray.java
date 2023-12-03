@@ -113,5 +113,25 @@ public class RotateArray {
         // System.out.println("Most important Task" + );
         return inputList.subList(0, endIndex); // CHECK
 
+        
     } // end of shuffleArray
+
+    // Added this getList for the RotateArray implementation into the GUI
+    // depending on the value of the arrayLevel the list 
+    // will be returning something back
+    
+    public List<String> getList(String arrayLevel) {
+        switch (arrayLevel.toLowerCase()) {
+            case "most":
+                return most;
+            case "mid":
+                return mid;
+            case "least":
+                return least;
+            default:
+                System.out.println("Array category not valid: " + arrayLevel);
+                return new ArrayList<>();
+        }
+    }
+
 }// end of class

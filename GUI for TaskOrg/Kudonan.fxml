@@ -11,9 +11,21 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
+<!-- We first create our canvas which would be the 
+ AnchorPane for our GUI-->
+
+
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="637.0" prefWidth="831.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
     <children>
+
+    <!-- Created a purple backgorund with the form
+    of a rectangle -->
+
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#291746" height="682.0" layoutX="-36.0" layoutY="-19.0" stroke="BLACK" strokeType="INSIDE" width="894.0" />
+
+        <!-- Began styling the text of our tile
+         for our GUI -->
+
       <Text layoutX="250.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TASK ORGANIZER">
          <font>
             <Font name="HelveticaNeueLTStd-Bd" size="40.0" />
@@ -35,6 +47,15 @@
             </RadialGradient>
          </fill>
       </Text>
+
+   <!-- Done with the tile
+   now lets edit out 'Most', 'Middle', and 'Least'groups 
+   -->
+
+<!--  We can start by changing the font -->
+
+
+
       <Text fill="#9bd18c" layoutX="103.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Most:">
          <font>
             <Font name="HelveticaNeueLTStd-Bd" size="35.0" />
@@ -50,6 +71,11 @@
             <Font name="HelveticaNeueLTStd-Bd" size="35.0" />
          </font>
       </Text>
+
+      <!--  We then edit the 
+      fields for the student input -->
+      
+
       <TextField fx:id="item1from1" layoutX="67.0" layoutY="323.0" opacity="0.35" prefHeight="50.0" prefWidth="167.0">
          <font>
             <Font size="25.0" />
@@ -95,6 +121,9 @@
             <Font size="25.0" />
          </font>
       </TextField>
+
+<!--  We then edit the areas where the result will come in -->
+
       <TextArea fx:id="mostTextArea" layoutX="57.0" layoutY="423.0" opacity="0.35" prefHeight="70.0" prefWidth="186.0">
          <font>
             <Font size="15.0" />
@@ -110,6 +139,8 @@
             <Font size="15.0" />
          </font>
       </TextArea>
-      <Button fx:id="organizeButton" layoutX="312.0" layoutY="517.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="234.0" text="Organize" onAction="#organizeButton" />
+
+      <!--  Ending this trip with the organize button -->
+      <Button fx:id="organizeButton" layoutX="312.0" layoutY="517.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="234.0" text="Organize" onAction="#organizeTasks" />
     </children>
 </AnchorPane>

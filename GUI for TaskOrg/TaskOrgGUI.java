@@ -13,12 +13,15 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+
 public class TaskOrgGUI extends Application {
 
-    private final RotateArray rotateArray = new RotateArray();
+    // Here is the instance of RotateArray from Noah for managing task lists
+    private final Connection connection = new RotateArrayAdapter(new RotateArray());
 
 
 
+    // Here you can find the components for JavaFX UI 
     @FXML
     private TextField item1from1;
     @FXML
@@ -48,9 +51,12 @@ public class TaskOrgGUI extends Application {
     @FXML
     private Button organizeButton;
 
+    // You can launch the method over here as well 
     public static void main(String[] args) {
         launch(args);
     }
+
+    // Override start method to initialize the JavaFX stage 
 
     @Override
     public void start(Stage primaryStage) throws IOException {
@@ -65,15 +71,19 @@ public class TaskOrgGUI extends Application {
         primaryStage.show();
     }
 
+    // Below you will find the button that makes the magic
+    // when is pressed 
     @FXML
     private void organizeButton(ActionEvent event) {
 
-        rotateArray.emptyArray("most");
+        connection.emptyArray("most");
 
-        rotateArray.emptyArray("mid");
+        connection.emptyArray("mid");
 
-        rotateArray.emptyArray("least");
+        connection.emptyArray("least");
 
+        
+        // The following collects the data and adds it to the text fields
         collectAndAddTasks("most", item1from1, item2from1, item3from1);
 
         collectAndAddTasks("mid", item1from2, item2from2, item3from2);
@@ -81,12 +91,14 @@ public class TaskOrgGUI extends Application {
         collectAndAddTasks("least", item1from3, item2from3, item3from3);
     }
 
+    // We can create a helper method to collect and add the data to RotateArray 
     private void collectAndAddTasks(String category, TextField... textFields) {
         for (TextField textField : textFields) {
-            rotateArray.addToArray(category, textField.getText());
+            connection.addToArray(category, textField.getText());
         }
     }
 
+    // Another magical data collector for the RotateArray
     @FXML
     private void organizeTasks(){
         collectTasksFromTextFields();
@@ -97,21 +109,24 @@ public class TaskOrgGUI extends Application {
 
     }
 
+    //Need of another data collector helper therefore this one is created 
     private void collectTasksFromTextFields(){
 
-        rotateArray.emptyArray("most");
-        rotateArray.emptyArray("mid");
-        rotateArray.emptyArray("least");
+        connection.emptyArray("most");
+        connection.emptyArray("mid");
+        connection.emptyArray("least");
 
         for (int i = 1; i <= 3; i++) {
 
-            rotateArray.addToArray("most", getTaskFromTextField("item" + i + "from1"));
-            rotateArray.addToArray("mid", getTaskFromTextField("item" + i + "from2"));
-            rotateArray.addToArray("least", getTaskFromTextField("item" + i + "from3"));
+            connection.addToArray("most", getTaskFromTextField("item" + i + "from1"));
+            connection.addToArray("mid", getTaskFromTextField("item" + i + "from2"));
+            connection.addToArray("least", getTaskFromTextField("item" + i + "from3"));
         }
         
 
     }
+
+    // Creation of a getter from the "most" field
 
     private String getTaskFromTextField(String textFieldId) {
 
@@ -119,59 +134,13 @@ public class TaskOrgGUI extends Application {
         return textField.getText();
     }
 
+    // This one will help us display our content
     private void organizeAndDisplay (String arrayLevel, TextArea resultArea) {
-
-        List<String> organizedTasks = rotateArray.shuffleArray(rotateArray.getList(arrayLevel.toLowerCase()), 3);
+        System.out.println("Organized Tasks for " + arrayLevel);
+        List<String> organizedTasks = connection.shuffleArray((arrayLevel.toLowerCase()), 3);
+        resultArea.clear();
         resultArea.setText(String.join("\n", organizedTasks));
 
     }
-
-        private static class RotateArray {
-
-            private List<String> most = new ArrayList<>();
-            private List<String> mid = new ArrayList<>();
-            private List<String> least = new ArrayList<>();
-    
-            public List<String> getList(String arrayLevel) {
-                switch (arrayLevel.toLowerCase()) {
-                    case "most":
-                        return most;
-                    case "mid":
-                        return mid;
-                    case "least":
-                        return least;
-                    default:
-                        System.out.println("Array category not valid: " + arrayLevel);
-                        return new ArrayList<>();
-                }
-            }
-    
-            public void addToArray(String arrayLevel, String task) {
-                List<String> array = getList(arrayLevel);
-                if (array != null) {
-                    array.add(task);
-                } else {
-                    System.out.println("Array category not valid: " + arrayLevel);
-                }
-            }
-    
-            public List<String> shuffleArray(List<String> inputList, int amountTask) {
-                List<String> shuffledList = new ArrayList<>(inputList);
-        Collections.shuffle(shuffledList);
-
-        int endIndex = Math.min(amountTask, shuffledList.size());
-        return shuffledList.subList(0, endIndex);
-            }
-    
-            public void emptyArray(String arrayLevel) {
-                List<String> toEmptyArray = getList(arrayLevel);
-                if (toEmptyArray != null) {
-                    toEmptyArray.clear();
-                    System.out.println(arrayLevel + " list is now empty");
-                } else {
-                    System.out.println("Array category is invalid: " + arrayLevel);
-                }
-            }
-        }
 
 }
