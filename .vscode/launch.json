@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ConnectionMain",
+            "request": "launch",
+            "mainClass": "ConnectionMain",
+            "projectName": "COP3530 project 8_28febc5c"
+        },
+        {
+            "type": "java",
             "name": "main",
             "request": "launch",
             "mainClass": "TESTING.main",
